@@ -3,20 +3,23 @@ import { NavController } from 'ionic-angular';
 
 import { HotelInfoPage } from '../hotelInfo/hotelInfo';
 
+interface Hotel {
+  imageUrl: string,
+  title: string,
+  description: string,
+  roomCost: number,
+  hasParking: boolean,
+  address: string,
+  phone: string
+}
+
 @Component({
   selector: 'page-hotels',
   templateUrl: 'hotels.html'
 })
+
 export class HotelsPage {
-  hotels: Array<{
-    imageUrl: string,
-    title: string,
-    description: string,
-    roomCost: number,
-    hasParking: boolean,
-    address: string,
-    phone: string
-  }>;
+  hotels: Array<Hotel>;
 
   parking: boolean;
   priceMax: string = '';
