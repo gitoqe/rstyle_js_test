@@ -8,12 +8,40 @@
 </ion-header>
 
 <ion-content>
+  <!-- Блок полей -->
   <ion-list>
-    <button ion-item *ngFor="let hotel of hotels">
+    <!-- Цена от -->
+    <ion-item>
+      <ion-label>
+         цена от
+      </ion-label>
+      <ion-input type="number" id="inputPriceMin" [(ngModel)]="priceMin" (ionChange)="filterHotels()"></ion-input>
+    </ion-item>
+
+    <!-- Цена до -->
+    <ion-item>
+      <ion-label>
+         цена до
+      </ion-label>
+      <ion-input type="number" id="inputPriceMax" [(ngModel)]="priceMax" (ionChange)="filterHotels()"></ion-input>
+    </ion-item>
+
+    <!-- Наличие парковки -->
+    <ion-item>
+      <ion-label>
+         наличие парковки обязательно
+      </ion-label>
+      <ion-checkbox id="checkboxParking" [(ngModel)]="parking" (ionChange)="filterHotels()"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item *ngFor="let hotel of hotelsToShow">
       <ion-avatar item-start>
         <img src="{{hotel.imageUrl}}">
       </ion-avatar>
       <h2>{{hotel.title}}</h2>
+      <p>{{hotel.roomCost}} ₽</p>
       <p>{{hotel.address}}</p>
     </button>
   </ion-list>
