@@ -36,7 +36,7 @@
   </ion-list>
 
   <ion-list>
-    <button ion-item *ngFor="let hotel of hotelsToShow">
+    <button ion-item *ngFor="let hotel of hotelsToShow" (click)="openHotelInfo(hotel)">
       <ion-avatar item-start>
         <img src="{{hotel.imageUrl}}">
       </ion-avatar>

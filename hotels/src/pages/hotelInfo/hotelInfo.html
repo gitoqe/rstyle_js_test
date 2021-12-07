@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{this.hotel.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <img src="{{this.hotel.imageUrl}}">
+    <h2>Описание:</h2>
+    <p>{{this.hotel.description}}</p>
+    <h2>Стоимость за ночь:</h2>
+    <p>{{this.hotel.roomCost}} ₽</p>
+    <h2>Адрес:</h2>
+    <p>{{this.hotel.address}}</p>
+    <h2>Наличие парковки:</h2>
+    <p>{{this.hotel.hasParkingAsString}}</p>
+    <h2>Телефон:</h2>
+    <p>{{this.hotel.phone}}</p>
+  </ion-item>
+</ion-content>

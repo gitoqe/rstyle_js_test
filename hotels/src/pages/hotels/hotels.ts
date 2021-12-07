@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { HotelInfoPage } from '../hotelInfo/hotelInfo';
+
 @Component({
   selector: 'page-hotels',
   templateUrl: 'hotels.html'
@@ -91,5 +93,9 @@ export class HotelsPage {
       this.hotelsToShow = this.hotelsToShow.filter(elem => {
         return (Number(this.priceMax) >= elem.roomCost);
       });
+  }
+
+  openHotelInfo(hotel) {
+    this.navCtrl.push(HotelInfoPage, {data: hotel});
   }
 }

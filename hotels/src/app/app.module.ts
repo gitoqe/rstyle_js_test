@@ -8,12 +8,14 @@ import { HotelsPage } from '../pages/hotels/hotels';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { HotelInfoPage } from '../pages/hotelInfo/hotelInfo';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    HotelsPage
+    HotelsPage,
+    HotelInfoPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    HotelsPage
+    HotelsPage,
+    HotelInfoPage
   ],
   providers: [
     StatusBar,
