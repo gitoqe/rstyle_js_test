@@ -1,3 +1,5 @@
 node_modules
 README.txt
 .DS_STORE
+hotels/www
+.sourcemaps
