@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 
 import { HotelInfoPage } from '../hotelInfo/hotelInfo';
 
-interface Hotel {
+export interface Hotel {
   imageUrl: string,
   title: string,
   description: string,
@@ -98,7 +98,7 @@ export class HotelsPage {
       });
   }
 
-  openHotelInfo(hotel) {
+  openHotelInfo(hotel: Hotel) {
     this.navCtrl.push(HotelInfoPage, {data: hotel});
   }
 }
