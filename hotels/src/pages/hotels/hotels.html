@@ -15,7 +15,7 @@
       <ion-label>
          цена от
       </ion-label>
-      <ion-input type="number" id="inputPriceMin" [(ngModel)]="priceMin" (ionChange)="filterHotels()"></ion-input>
+      <ion-input type="number" [(ngModel)]="priceMin" (ionChange)="filterHotels()"></ion-input>
     </ion-item>
 
     <!-- Цена до -->
@@ -23,7 +23,7 @@
       <ion-label>
          цена до
       </ion-label>
-      <ion-input type="number" id="inputPriceMax" [(ngModel)]="priceMax" (ionChange)="filterHotels()"></ion-input>
+      <ion-input type="number" [(ngModel)]="priceMax" (ionChange)="filterHotels()"></ion-input>
     </ion-item>
 
     <!-- Наличие парковки -->
@@ -31,7 +31,7 @@
       <ion-label>
          наличие парковки обязательно
       </ion-label>
-      <ion-checkbox id="checkboxParking" [(ngModel)]="parking" (ionChange)="filterHotels()"></ion-checkbox>
+      <ion-checkbox [(ngModel)]="parking" (ionChange)="filterHotels()"></ion-checkbox>
     </ion-item>
   </ion-list>
 
@@ -44,5 +44,6 @@
       <p>{{hotel.roomCost}} ₽</p>
       <p>{{hotel.address}}</p>
     </button>
+    <div *ngIf="hotelsToShow.length == 0">Отели не дайдены.</div>
   </ion-list>
 </ion-content>
